@@ -54,13 +54,15 @@ namespace Tarea1.Ventanas
             this.listBoxSede = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAddDocente = new System.Windows.Forms.Button();
             this.TablaDocente = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnAddDocente = new System.Windows.Forms.Button();
+            this.btnResfrecar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -373,30 +375,19 @@ namespace Tarea1.Ventanas
             // 
             // tableLayoutPanel10
             // 
-            this.tableLayoutPanel10.ColumnCount = 1;
+            this.tableLayoutPanel10.ColumnCount = 3;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel10.Controls.Add(this.btnAddDocente, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.btnActualizar, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.btnResfrecar, 2, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(53, 35);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(249, 35);
             this.tableLayoutPanel10.TabIndex = 0;
-            // 
-            // btnAddDocente
-            // 
-            this.btnAddDocente.BackColor = System.Drawing.Color.White;
-            this.btnAddDocente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddDocente.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.btnAddDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddDocente.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddDocente.Image = global::Tarea1.Properties.Resources.add_insert_plus_1588;
-            this.btnAddDocente.Location = new System.Drawing.Point(3, 3);
-            this.btnAddDocente.Name = "btnAddDocente";
-            this.btnAddDocente.Size = new System.Drawing.Size(47, 29);
-            this.btnAddDocente.TabIndex = 0;
-            this.btnAddDocente.UseVisualStyleBackColor = false;
             // 
             // TablaDocente
             // 
@@ -415,8 +406,10 @@ namespace Tarea1.Ventanas
             this.TablaDocente.Name = "TablaDocente";
             this.TablaDocente.ReadOnly = true;
             this.TablaDocente.RowHeadersVisible = false;
+            this.TablaDocente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TablaDocente.Size = new System.Drawing.Size(497, 429);
             this.TablaDocente.TabIndex = 1;
+            this.TablaDocente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TablaDocente_CellClick);
             // 
             // Column1
             // 
@@ -452,6 +445,46 @@ namespace Tarea1.Ventanas
             this.Column5.HeaderText = "Sedes";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnActualizar.Location = new System.Drawing.Point(87, 3);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(78, 29);
+            this.btnActualizar.TabIndex = 1;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnAddDocente
+            // 
+            this.btnAddDocente.BackColor = System.Drawing.Color.White;
+            this.btnAddDocente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddDocente.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnAddDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddDocente.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAddDocente.Image = global::Tarea1.Properties.Resources.add_insert_plus_1588;
+            this.btnAddDocente.Location = new System.Drawing.Point(3, 3);
+            this.btnAddDocente.Name = "btnAddDocente";
+            this.btnAddDocente.Size = new System.Drawing.Size(78, 29);
+            this.btnAddDocente.TabIndex = 0;
+            this.btnAddDocente.UseVisualStyleBackColor = false;
+            this.btnAddDocente.Click += new System.EventHandler(this.AddDocentes);
+            // 
+            // btnResfrecar
+            // 
+            this.btnResfrecar.BackColor = System.Drawing.Color.Aqua;
+            this.btnResfrecar.Location = new System.Drawing.Point(172, 3);
+            this.btnResfrecar.Name = "btnResfrecar";
+            this.btnResfrecar.Size = new System.Drawing.Size(74, 29);
+            this.btnResfrecar.TabIndex = 2;
+            this.btnResfrecar.Text = "Refrescar";
+            this.btnResfrecar.UseVisualStyleBackColor = false;
+            this.btnResfrecar.Click += new System.EventHandler(this.btnResfrecar_Click);
             // 
             // FormRegistrarD
             // 
@@ -518,5 +551,7 @@ namespace Tarea1.Ventanas
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnResfrecar;
     }
 }

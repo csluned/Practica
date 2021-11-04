@@ -20,6 +20,8 @@ namespace Tarea1.Ventanas
         private Profesores docente = new Profesores();
         private int contador = 0;
 
+        private string cedula;
+
 
         public FormRegistrarD()
         {
@@ -115,14 +117,14 @@ namespace Tarea1.Ventanas
                     docente.Usuario = textUsuario.Text;
 
                     // Punto 6
-                   // int resultado = LogicaDocentes.GuardarDocente(docente);
-                   /*
+                    int resultado = LogicaDocentes.GuardarDocente(docente,listaSedes);
+                  
                     if (resultado == 0)
                     {
                         MessageBox.Show("Profesor se agrego correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         limpiarFormulario();
                         cargarTabla();
-                    }*/
+                    }
 
                 }
 
@@ -143,7 +145,7 @@ namespace Tarea1.Ventanas
 
             // Se incializa el objeto docente
             docente = new Profesores();
-            contador = 0;
+            listaSedes = new List<Sedes>();
             cbxListaSede.SelectedIndex = 0;
             textCarnet.Text = string.Empty;
             textNombre.Text = string.Empty;
@@ -152,7 +154,6 @@ namespace Tarea1.Ventanas
             textSalario.Text = string.Empty;
             textUsuario.Text = string.Empty;
             listBoxSede.Items.Clear();
-
 
         }
 
@@ -204,5 +205,27 @@ namespace Tarea1.Ventanas
 
         }
 
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+            Dialogo dialogo = new Dialogo(cedula);
+            dialogo.ShowDialog();
+
+
+
+
+        }
+
+        private void TablaDocente_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cedula = TablaDocente.Rows[e.RowIndex].Cells[0].Value.ToString();
+           
+
+        }
+
+        private void btnResfrecar_Click(object sender, EventArgs e)
+        {
+            cargarTabla();
+        }
     }
 }

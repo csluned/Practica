@@ -14,7 +14,7 @@ namespace AccesoDatos
     {
         // Ir al archivo de configuracion Settings.settings se encuentra el string connection.
 
-        //  private string strconexion = Properties.Settings.Default.CadenaBD.ToString();
+        // private string strconexion = Properties.Settings.Default.CadenaBD.ToString();
 
 
         // conection string en el archivo app.config  
@@ -38,10 +38,11 @@ namespace AccesoDatos
                 throw ex;
 
             }
-            finally {
+            finally
+            {
 
                 this.Cerrar();
-            
+
             }
 
 
@@ -56,12 +57,14 @@ namespace AccesoDatos
 
 
         // abrirla 
-        private void Abrir() {
+        private void Abrir()
+        {
 
-            if (objconexion.State == System.Data.ConnectionState.Closed) {
+            if (objconexion.State == System.Data.ConnectionState.Closed)
+            {
 
                 objconexion.Open();
-            
+
             }
 
         }
@@ -69,15 +72,17 @@ namespace AccesoDatos
 
         // cerrar
 
-        private void Cerrar() {
+        private void Cerrar()
+        {
 
-            if (objconexion.State == System.Data.ConnectionState.Open) {
+            if (objconexion.State == System.Data.ConnectionState.Open)
+            {
 
                 objconexion.Close();
             }
 
-        
-        
+
+
         }
 
 
@@ -104,7 +109,8 @@ namespace AccesoDatos
 
                 throw e;
             }
-            finally {
+            finally
+            {
 
                 this.Cerrar();
             }
@@ -115,12 +121,13 @@ namespace AccesoDatos
 
         // Cuando son consulta se realizan metodos aparte
 
-        public bool  SiExisteSede(string sentecia)
+        public bool SiExisteSede(string sentecia)
         {
-           
+
             DataTable dt = new DataTable();
 
-            try {
+            try
+            {
 
                 //Este objeto es el que se encarga de ejecutar la peticion contra base de datos
                 SqlCommand comando = new SqlCommand();
@@ -134,7 +141,8 @@ namespace AccesoDatos
 
                 objconsulta.Fill(dt);
 
-                if (dt.Rows.Count > 0) {
+                if (dt.Rows.Count > 0)
+                {
 
                     return true;
                 }
@@ -144,7 +152,8 @@ namespace AccesoDatos
 
 
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 throw ex;
             }
             finally
@@ -182,14 +191,15 @@ namespace AccesoDatos
                 if (dt.Rows.Count > 0)
                 {
 
-                    foreach (DataRow fila in dt.Rows) {
+                    foreach (DataRow fila in dt.Rows)
+                    {
 
                         lstResultados.Add(new ConsultaDocentes
                         {
                             Cedula = fila.ItemArray[0].ToString(),
                             Nombre = fila.ItemArray[1].ToString(),
                             PrimerAp = fila.ItemArray[2].ToString(),
-                            Sueldo =  Convert.ToDouble( fila.ItemArray[3].ToString()),
+                            Sueldo = Convert.ToDouble(fila.ItemArray[3].ToString()),
                             Descripcion = fila.ItemArray[4].ToString(),
 
 
@@ -249,7 +259,7 @@ namespace AccesoDatos
 
                         lstResultados.Add(new Sedes
                         {
-                            IdSede = Convert.ToInt32( fila.ItemArray[0].ToString()),
+                            IdSede = Convert.ToInt32(fila.ItemArray[0].ToString()),
                             Descripcion = fila.ItemArray[1].ToString(),
 
 
@@ -281,59 +291,115 @@ namespace AccesoDatos
 
 
 
+        public Personas getPersona(string sentecia)
+        {
+
+            DataTable dt = new DataTable();
+
+            Personas lstResultados = new Personas();
 
 
-        /*
-        private static Sedes[] dataSedes = new Sedes[20];
-        private static Profesores[] dataDocentes = new Profesores[20];
-        private static int index1 = 0;
+            try
+            {
 
+                //Este objeto es el que se encarga de ejecutar la peticion contra base de datos
+                SqlCommand comando = new SqlCommand();
 
-        public static bool GuardarSede(Sedes sedes) {
+                //Asignacion los valores por ejecutar
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.Connection = objconexion;
+                comando.CommandText = sentecia;
 
-            dataSedes[index1] = sedes;
-           
-            index1++;
+                SqlDataAdapter objconsulta = new SqlDataAdapter(comando);
 
-            //prueba
-            Console.WriteLine(dataSedes.Length);
+                objconsulta.Fill(dt);
 
-            return true;
-        }
-
-
-        public static bool SiExisteSede( int codigo) {
-
-            if (index1 > 0) {
-
-                foreach (Sedes item in dataSedes)
+                if (dt.Rows.Count > 0)
                 {
-                    if (item.IdSede == codigo)
+
+                    foreach (DataRow fila in dt.Rows)
                     {
-                        return true;
+
+                        lstResultados.Nombre = fila.ItemArray[0].ToString();
+                        lstResultados.PrimerAp = fila.ItemArray[1].ToString();
+
+
+
+
                     }
+
                 }
+
+                return lstResultados;
 
 
             }
-             
-                
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+
+                this.Cerrar();
+            }
 
 
 
-            return false;
+
+
+            /*
+            private static Sedes[] dataSedes = new Sedes[20];
+            private static Profesores[] dataDocentes = new Profesores[20];
+            private static int index1 = 0;
+
+
+            public static bool GuardarSede(Sedes sedes) {
+
+                dataSedes[index1] = sedes;
+
+                index1++;
+
+                //prueba
+                Console.WriteLine(dataSedes.Length);
+
+                return true;
+            }
+
+
+            public static bool SiExisteSede( int codigo) {
+
+                if (index1 > 0) {
+
+                    foreach (Sedes item in dataSedes)
+                    {
+                        if (item.IdSede == codigo)
+                        {
+                            return true;
+                        }
+                    }
+
+
+                }
+
+
+
+
+
+                return false;
+
+            }
+
+
+
+            public static Sedes[] getSede() { 
+
+                return dataSedes;
+
+            }
+
+            */
 
         }
-
-
-
-        public static Sedes[] getSede() { 
-        
-            return dataSedes;
-        
-        }
-
-        */
-
     }
 }

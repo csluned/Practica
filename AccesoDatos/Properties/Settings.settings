@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AccesoDatos.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="ConexionDB" Type="System.String" Scope="User">
+    <Setting Name="CadenaBD" Type="System.String" Scope="User">
       <Value Profile="(Default)">Data Source=KRKMO\SQLEXPRESS;Initial Catalog=Universidad;Integrated Security=True</Value>
     </Setting>
   </Settings>

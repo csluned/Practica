@@ -27,12 +27,12 @@ namespace AccesoDatos.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=KRKMO\\SQLEXPRESS;Initial Catalog=Universidad;Integrated Security=True" +
             "")]
-        public string ConexionDB {
+        public string CadenaBD {
             get {
-                return ((string)(this["ConexionDB"]));
+                return ((string)(this["CadenaBD"]));
             }
             set {
-                this["ConexionDB"] = value;
+                this["CadenaBD"] = value;
             }
         }
     }

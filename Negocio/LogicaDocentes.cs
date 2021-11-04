@@ -31,7 +31,18 @@ namespace Negocio
 
                 if (conexion.Ejecutar_Sentencia(senteciaInsertar2)) {
 
-                    
+                    // agregar todas las sede que corresponde a un profesor
+                    foreach (var item in listasede) {
+
+
+                        string senteciaInsertar3 = "INSERT INTO ProfesorXSede (cedula,IdSede) VALUES ('" + docente.Cedula + "','" + item.IdSede + "')";
+
+                        conexion.Ejecutar_Sentencia(senteciaInsertar3);
+
+
+                    }
+
+
 
 
                 }
@@ -61,6 +72,60 @@ namespace Negocio
 
             return conexion.getProfesores(setencia);
         }
+
+
+        public static Personas getPersona( string cedula) {
+
+            ConexionDatos conexion = new ConexionDatos();
+
+            string setencia = "SELECT nombre,apellidos FROM Personas WHERE cedula = '" + cedula + "'";
+
+            return conexion.getPersona(setencia);
+
+
+        }
+
+        public static int ActualizarPersona(Personas persona)
+        {
+
+           
+
+            // Retorna 1 si la descripcion esta vacia
+            if (String.IsNullOrEmpty(persona.Nombre))
+            {
+                return 1;
+            }
+
+
+            // Retorna 1 si la descripcion esta vacia
+            if (String.IsNullOrEmpty(persona.PrimerAp))
+            {
+                return 2;
+            }
+
+
+
+            ConexionDatos conexion = new ConexionDatos();
+            string senteciaActualizar = "UPDATE Personas SET nombre ='" + persona.Nombre + "',apellidos='" + persona.PrimerAp + "' WHERE cedula = '" + persona.Cedula + "'";
+
+
+
+            if (conexion.Ejecutar_Sentencia(senteciaActualizar))
+            {
+
+                return 0;
+            }
+
+
+            return 3;
+
+        }
+
+
+
+
+
+
 
     }
 }
