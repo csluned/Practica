@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LogicaDocentes.cs" />
     <Compile Include="LogicaSedes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Universidades.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">

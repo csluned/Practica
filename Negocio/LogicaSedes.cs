@@ -11,23 +11,36 @@ namespace Negocio
     public class LogicaSedes
     {
 
-        public static int GuardarSede( Universidades sedes) {
+        public static int GuardarSede( Sedes sedes) {
+
+            ConexionDatos conexion = new ConexionDatos();
+            string senteciaConsulta = "SELECT * FROM Sedes Where idSede =" + sedes.IdSede; 
+
 
             // Retorna 1 si la descripcion esta vacia
             if (String.IsNullOrEmpty(sedes.Descripcion)) {
                 return 1;
             }
 
+
             //Retorna 2 si el codigo es repetido
-            if (ConexionDatos.SiExisteSede(sedes.IdSede)) {
+            if (conexion.SiExisteSede(senteciaConsulta)) {
 
                 return 2;
             }
 
 
-            ConexionDatos.GuardarSede(sedes);
+            string senteciaInsertar = "INSERT INTO Sedes(idSede,descripcion) Values ('" + sedes.IdSede + "','" + sedes.Descripcion + "')";
 
-            return 0;
+
+            if (conexion.Ejecutar_Sentencia(senteciaInsertar))
+            {
+
+                return 0;
+            }
+
+
+            return 3;
 
         }
 
@@ -35,23 +48,29 @@ namespace Negocio
         // 2. comprobar datos ingresado de sedes.
         public static bool CompDatosSedes()
         {
-
-            Universidades[] listSede = ConexionDatos.getSede();
+            /*
+            Sedes[] listSede = ConexionDatos.getSede();
             Console.WriteLine(listSede.Count());
 
             if (listSede.Count(x => x != null) == 0 || listSede == null)
             {
                 return true;
-            }
+            }*/
 
             return false;
 
         }
 
+     
+        public static List<Sedes> getSedes() {
 
-        public static Universidades[] getSedes() {
+            ConexionDatos conexion = new ConexionDatos();
 
-            return ConexionDatos.getSede();
+            string sentecia = "SELECT * FROM Sedes";
+
+
+
+          return conexion.getSede(sentecia);
 
         
         }

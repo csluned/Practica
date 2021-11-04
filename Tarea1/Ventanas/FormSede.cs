@@ -32,13 +32,13 @@ namespace Tarea1.Ventanas
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
-            Console.WriteLine("Si entra");
+
             try
             {
 
-                Console.WriteLine("Si entra");
 
-                Universidades sede = new Universidades();
+
+                Sedes sede = new Sedes();
                 sede.IdSede = Convert.ToInt32(textCodigo.Text);
                 sede.Descripcion = textDesp.Text;
 
@@ -56,6 +56,9 @@ namespace Tarea1.Ventanas
                         break;
                     case 2:
                         CuadraDialogo("El codigo " + sede.IdSede + " existe", "Validacion", MessageBoxIcon.Warning);
+                        break;
+                    case 3:
+                        CuadraDialogo("No se registro los datoa a la base de datos", "Base Datos", MessageBoxIcon.Information);
                         break;
 
                 }

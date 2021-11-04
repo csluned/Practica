@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    // Clase de Objeto padre que hereda a clase hijas Profesor y Estudiantes
-    public class Personas
+    public class ConsultaDocentes
     {
         public string Cedula { get; set; }
         public string Nombre { get; set; }
         public string PrimerAp { get; set; }
+
+        public double Sueldo { get; set; }
+
+        public string Descripcion { get; set; }
+
 
     }
 }

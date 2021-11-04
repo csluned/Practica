@@ -32,30 +32,30 @@ namespace Tarea1.Ventanas
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textUsuario = new System.Windows.Forms.TextBox();
+            this.textPass = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textCarnet = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textNombre = new System.Windows.Forms.TextBox();
+            this.textApellidos = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textSalario = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbxSedes = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listaSedes = new System.Windows.Forms.ListBox();
+            this.cbxListaSede = new System.Windows.Forms.ComboBox();
+            this.btnAddSede = new System.Windows.Forms.Button();
+            this.listBoxSede = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAddDocente = new System.Windows.Forms.Button();
+            this.TablaDocente = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,7 +71,7 @@ namespace Tarea1.Ventanas
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaDocente)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -86,7 +86,7 @@ namespace Tarea1.Ventanas
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(856, 479);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(858, 482);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -96,12 +96,12 @@ namespace Tarea1.Ventanas
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel7, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.textCarnet, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel8, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.listaSedes, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.listBoxSede, 0, 8);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -115,7 +115,7 @@ namespace Tarea1.Ventanas
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 225F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(343, 473);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(343, 476);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel7
@@ -124,8 +124,8 @@ namespace Tarea1.Ventanas
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Controls.Add(this.textBox5, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.textBox6, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.textUsuario, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.textPass, 2, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 172);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -134,22 +134,22 @@ namespace Tarea1.Ventanas
             this.tableLayoutPanel7.Size = new System.Drawing.Size(337, 25);
             this.tableLayoutPanel7.TabIndex = 6;
             // 
-            // textBox5
+            // textUsuario
             // 
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox5.Location = new System.Drawing.Point(3, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(140, 20);
-            this.textBox5.TabIndex = 0;
+            this.textUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textUsuario.Location = new System.Drawing.Point(3, 3);
+            this.textUsuario.Name = "textUsuario";
+            this.textUsuario.Size = new System.Drawing.Size(140, 20);
+            this.textUsuario.TabIndex = 0;
             // 
-            // textBox6
+            // textPass
             // 
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox6.Location = new System.Drawing.Point(193, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(141, 20);
-            this.textBox6.TabIndex = 1;
-            this.textBox6.UseSystemPasswordChar = true;
+            this.textPass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textPass.Location = new System.Drawing.Point(193, 3);
+            this.textPass.Name = "textPass";
+            this.textPass.Size = new System.Drawing.Size(141, 20);
+            this.textPass.TabIndex = 1;
+            this.textPass.UseSystemPasswordChar = true;
             // 
             // tableLayoutPanel6
             // 
@@ -197,12 +197,12 @@ namespace Tarea1.Ventanas
             this.label1.TabIndex = 0;
             this.label1.Text = "Carnet:";
             // 
-            // textBox1
+            // textCarnet
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 20);
-            this.textBox1.TabIndex = 1;
+            this.textCarnet.Location = new System.Drawing.Point(3, 27);
+            this.textCarnet.Name = "textCarnet";
+            this.textCarnet.Size = new System.Drawing.Size(193, 20);
+            this.textCarnet.TabIndex = 1;
             // 
             // tableLayoutPanel3
             // 
@@ -246,8 +246,8 @@ namespace Tarea1.Ventanas
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.textBox2, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBox3, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.textNombre, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.textApellidos, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 85);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -256,21 +256,21 @@ namespace Tarea1.Ventanas
             this.tableLayoutPanel4.Size = new System.Drawing.Size(337, 25);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
-            // textBox2
+            // textNombre
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(3, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 20);
-            this.textBox2.TabIndex = 0;
+            this.textNombre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textNombre.Location = new System.Drawing.Point(3, 3);
+            this.textNombre.Name = "textNombre";
+            this.textNombre.Size = new System.Drawing.Size(140, 20);
+            this.textNombre.TabIndex = 0;
             // 
-            // textBox3
+            // textApellidos
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(193, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(141, 20);
-            this.textBox3.TabIndex = 1;
+            this.textApellidos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textApellidos.Location = new System.Drawing.Point(193, 3);
+            this.textApellidos.Name = "textApellidos";
+            this.textApellidos.Size = new System.Drawing.Size(141, 20);
+            this.textApellidos.TabIndex = 1;
             // 
             // tableLayoutPanel5
             // 
@@ -278,7 +278,7 @@ namespace Tarea1.Ventanas
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.84867F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.15134F));
             this.tableLayoutPanel5.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.textBox4, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.textSalario, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 116);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -298,21 +298,21 @@ namespace Tarea1.Ventanas
             this.label4.Text = "Salario: ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox4
+            // textSalario
             // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(80, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(254, 20);
-            this.textBox4.TabIndex = 1;
+            this.textSalario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textSalario.Location = new System.Drawing.Point(80, 3);
+            this.textSalario.Name = "textSalario";
+            this.textSalario.Size = new System.Drawing.Size(254, 20);
+            this.textSalario.TabIndex = 1;
             // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 2;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.20475F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.79525F));
-            this.tableLayoutPanel8.Controls.Add(this.cbxSedes, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.cbxListaSede, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.btnAddSede, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 203);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -321,60 +321,61 @@ namespace Tarea1.Ventanas
             this.tableLayoutPanel8.Size = new System.Drawing.Size(337, 34);
             this.tableLayoutPanel8.TabIndex = 7;
             // 
-            // cbxSedes
+            // cbxListaSede
             // 
-            this.cbxSedes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbxSedes.FormattingEnabled = true;
-            this.cbxSedes.Location = new System.Drawing.Point(3, 3);
-            this.cbxSedes.Name = "cbxSedes";
-            this.cbxSedes.Size = new System.Drawing.Size(207, 21);
-            this.cbxSedes.TabIndex = 0;
+            this.cbxListaSede.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbxListaSede.FormattingEnabled = true;
+            this.cbxListaSede.Location = new System.Drawing.Point(3, 3);
+            this.cbxListaSede.Name = "cbxListaSede";
+            this.cbxListaSede.Size = new System.Drawing.Size(207, 21);
+            this.cbxListaSede.TabIndex = 0;
             // 
-            // button1
+            // btnAddSede
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.LimeGreen;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(216, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 28);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Agregar Sede";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAddSede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAddSede.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddSede.FlatAppearance.BorderColor = System.Drawing.Color.LimeGreen;
+            this.btnAddSede.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnAddSede.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAddSede.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddSede.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSede.Location = new System.Drawing.Point(216, 3);
+            this.btnAddSede.Name = "btnAddSede";
+            this.btnAddSede.Size = new System.Drawing.Size(118, 28);
+            this.btnAddSede.TabIndex = 1;
+            this.btnAddSede.Text = "Agregar Sede";
+            this.btnAddSede.UseVisualStyleBackColor = false;
+            this.btnAddSede.Click += new System.EventHandler(this.agregarSedes);
             // 
-            // listaSedes
+            // listBoxSede
             // 
-            this.listaSedes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listaSedes.FormattingEnabled = true;
-            this.listaSedes.Location = new System.Drawing.Point(3, 243);
-            this.listaSedes.Name = "listaSedes";
-            this.listaSedes.Size = new System.Drawing.Size(337, 227);
-            this.listaSedes.TabIndex = 8;
+            this.listBoxSede.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxSede.FormattingEnabled = true;
+            this.listBoxSede.Location = new System.Drawing.Point(3, 243);
+            this.listBoxSede.Name = "listBoxSede";
+            this.listBoxSede.Size = new System.Drawing.Size(337, 230);
+            this.listBoxSede.TabIndex = 8;
             // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.ColumnCount = 1;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.dataGridView1, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.TablaDocente, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(352, 3);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.668077F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.33192F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(501, 473);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(503, 476);
             this.tableLayoutPanel9.TabIndex = 1;
             // 
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.ColumnCount = 1;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Controls.Add(this.button2, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.btnAddDocente, 0, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
@@ -382,40 +383,40 @@ namespace Tarea1.Ventanas
             this.tableLayoutPanel10.Size = new System.Drawing.Size(53, 35);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
-            // button2
+            // btnAddDocente
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Image = global::Tarea1.Properties.Resources.add_insert_plus_1588;
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 29);
-            this.button2.TabIndex = 0;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAddDocente.BackColor = System.Drawing.Color.White;
+            this.btnAddDocente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddDocente.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.btnAddDocente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddDocente.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAddDocente.Image = global::Tarea1.Properties.Resources.add_insert_plus_1588;
+            this.btnAddDocente.Location = new System.Drawing.Point(3, 3);
+            this.btnAddDocente.Name = "btnAddDocente";
+            this.btnAddDocente.Size = new System.Drawing.Size(47, 29);
+            this.btnAddDocente.TabIndex = 0;
+            this.btnAddDocente.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // TablaDocente
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TablaDocente.AllowUserToAddRows = false;
+            this.TablaDocente.AllowUserToDeleteRows = false;
+            this.TablaDocente.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.TablaDocente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaDocente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(495, 426);
-            this.dataGridView1.TabIndex = 1;
+            this.TablaDocente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TablaDocente.Location = new System.Drawing.Point(3, 44);
+            this.TablaDocente.Name = "TablaDocente";
+            this.TablaDocente.ReadOnly = true;
+            this.TablaDocente.RowHeadersVisible = false;
+            this.TablaDocente.Size = new System.Drawing.Size(497, 429);
+            this.TablaDocente.TabIndex = 1;
             // 
             // Column1
             // 
@@ -456,12 +457,12 @@ namespace Tarea1.Ventanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 479);
+            this.ClientSize = new System.Drawing.Size(858, 482);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormRegistrarD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registrar Docentes";
-            this.Load += new System.EventHandler(this.FormRegistrarD_Load);
+            this.Load += new System.EventHandler(this.CargarDatos);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -478,7 +479,7 @@ namespace Tarea1.Ventanas
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaDocente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -488,30 +489,30 @@ namespace Tarea1.Ventanas
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textUsuario;
+        private System.Windows.Forms.TextBox textPass;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textCarnet;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textNombre;
+        private System.Windows.Forms.TextBox textApellidos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textSalario;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.ComboBox cbxSedes;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listaSedes;
+        private System.Windows.Forms.ComboBox cbxListaSede;
+        private System.Windows.Forms.Button btnAddSede;
+        private System.Windows.Forms.ListBox listBoxSede;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnAddDocente;
+        private System.Windows.Forms.DataGridView TablaDocente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
